@@ -60,13 +60,7 @@ namespace Homework5
 
         public int Peek()
         {
-            if (index == 0)
-            {
-                Console.WriteLine("nothing to peek");
-                return 0;
-            }
-
-            return stack[index - 1];
+           return stack[index - 1];
         }
     }
 }
