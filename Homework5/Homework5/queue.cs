@@ -63,7 +63,7 @@ namespace Homework5
             
         }
 
-        public bool isFull()
+        public bool IsFull()
         {
             if (counter > queue.Length - 1)
             {
@@ -74,7 +74,7 @@ namespace Homework5
             
         }
 
-        public bool isEmpty()
+        public bool IsEmpty()
         {
             if (counter == 0)
             {

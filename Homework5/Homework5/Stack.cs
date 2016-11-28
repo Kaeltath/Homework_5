@@ -22,7 +22,7 @@ namespace Homework5
 
         public void Push(int topush)
         {
-            if (isFull())
+            if (IsFull())
             {
                 Console.WriteLine("stack overflow");
                 Console.ReadKey();
@@ -39,7 +39,7 @@ namespace Homework5
 
         }
 
-        public bool isFull()
+        public bool IsFull()
         {
             if (index == stack.Length)
             {
@@ -49,7 +49,7 @@ namespace Homework5
 
         }
 
-        public bool isEmpty()
+        public bool IsEmpty()
         {
             if (index < 0)
             {

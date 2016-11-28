@@ -58,7 +58,7 @@ namespace Homework5
 
                         if (i%2 == 0)
                         {
-                            if (!tryStack.isEmpty())
+                            if (!tryStack.IsEmpty())
                             {
                                 topop = tryStack.Pop();
                                 Console.WriteLine("{0}", topop);
@@ -94,7 +94,7 @@ namespace Homework5
                         tryQueue.Enqueue(value);
                         if (j%2 == 0)
                         {
-                            if (!tryQueue.isEmpty())
+                            if (!tryQueue.IsEmpty())
                             {
                                 dequevaleue = tryQueue.Dequeue();
                                 Console.WriteLine(dequevaleue);
