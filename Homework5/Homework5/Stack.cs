@@ -51,7 +51,7 @@ namespace Homework5
 
         public bool IsEmpty()
         {
-            if (index < 0)
+            if (index == 0)
             {
                 return true;
             }
