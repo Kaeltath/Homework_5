@@ -6,14 +6,15 @@ using System.Threading.Tasks;
 
 namespace Homework5
 {
-    class Queue
+    class MyQueue
     {
 
 
         static int[] queue;
         static int tail, head, counter;
 
-        public Queue()
+
+        public MyQueue()
         {
         queue = new int[5];
         tail = 0;
@@ -43,55 +44,45 @@ namespace Homework5
             }
 
         }
-
-        public bool Dequeue(out int value)
+        
+        public int Dequeue ()
         {
-            if (counter == 0)
-            {
-                value = 0;
-                return false;
-
-            }
+            int value;
             if (head < queue.Length - 1)
             {
                 value = queue[head];
                 head++;
                 counter--;
-                return true;
-            }
+                return value;
+             }
 
             value = queue[head];
             head = 0;
             counter--;
-            return true;
-
-
+            return value;
+            
         }
 
-        public static void isFull()
+        public bool isFull()
         {
             if (counter > queue.Length - 1)
             {
-                Console.WriteLine("queue is full don't add new elements untill enqeue older items");
-                //Console.ReadLine();
+                return true;
             }
-            else
-            {
-                Console.WriteLine("queue is not full ");
-            }
+            
+                return false;
+            
         }
 
-        public void isEmpty()
+        public bool isEmpty()
         {
             if (counter == 0)
             {
-                Console.WriteLine("queue is empty");
-                Console.ReadLine();
+                return true;
             }
-            else
-            {
-                Console.WriteLine("queue is not empty");
-            }
+            
+            return false;
+            
         }
 
     }

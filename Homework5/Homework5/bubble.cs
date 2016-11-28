@@ -7,16 +7,16 @@ using System.Threading.Tasks;
 
 namespace Homework5
 {
-    internal class Bubble
+    internal class BubbleSorter
     {
         private int[] sortArray;
 
-        public Bubble()
+        public BubbleSorter()
         {
             sortArray = new int[3];
         }
 
-        public Bubble(int[] sortArray)
+        public BubbleSorter(int[] sortArray)
         {
             this.sortArray = sortArray;
         }

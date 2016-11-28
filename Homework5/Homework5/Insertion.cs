@@ -6,16 +6,16 @@ using System.Threading.Tasks;
 
 namespace Homework5
 {
-    class Insertion
+    class InsertionSorter
     {
          private int[] sortArray;
 
-        public Insertion()
+        public InsertionSorter()
         {
             sortArray = new int[3];
         }
 
-        public Insertion(int[] sortArray)
+        public InsertionSorter(int[] sortArray)
         {
             this.sortArray = sortArray;
         }

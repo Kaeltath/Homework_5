@@ -29,14 +29,14 @@ namespace Homework5
                 case 1:
 
                     sortArray = new int[] {1, 2, 6, 4, 3, 5, 6, 5, 7, 0};
-                    Bubble tryBubble = new Bubble(sortArray);
+                    BubbleSorter tryBubble = new BubbleSorter(sortArray);
                     tryBubble.Print();
 
                     Console.ReadLine();
                     break;
                 case 2:
                     sortArray = new int[] {1, 2, 6, 4, 3, 5, 6, 1233, -3333333, 5, 7, 0};
-                    Insertion tryInsertion = new Insertion(sortArray);
+                    InsertionSorter tryInsertion = new InsertionSorter(sortArray);
                     tryInsertion.Print();
 
                     Console.ReadLine();
@@ -44,7 +44,7 @@ namespace Homework5
                 case 3:
                     int topush;
                     int topop;
-                    Stack tryStack = new Stack();
+                    MyStack tryStack = new MyStack();
                     for (int i = 1; i < 20; i++)
                     {
                         Console.WriteLine("Please input next element to be pushed to stack");
@@ -58,38 +58,45 @@ namespace Homework5
 
                         if (i%2 == 0)
                         {
-                            tryStack.Pop(out topop);
-                            Console.WriteLine("{0}", topop);
+                            if (!tryStack.isEmpty())
+                            {
+                                topop = tryStack.Pop();
+                                Console.WriteLine("{0}", topop);
+                            }
+                            else
+                            {
+                                Console.WriteLine("Stack is empty");
+                            }
                         }
-                        else
-                        {
-                            Console.WriteLine("Stack is empty");
-                        }
+
                     }
-                    /*   int topeek;
-                    if (tryStack.Peek(out topeek))
+                 /*   int topeek;
+                    if (!tryStack.isEmpty())
                     {
                         Console.WriteLine("{0}", topeek);
                     }
                     else
                     {
                         Console.WriteLine("Stack is empty");
-                    } */
+                    }*/
 
                     break;
+                   
+
+
                 case 4:
-                    Queue tryQueue = new Queue();
+                    MyQueue tryQueue = new MyQueue();
                     int dequevaleue = 0;
                     for (int j = 1; j < 40; j++)
                     {
                         Console.WriteLine("plese input next element to be put in queue");
                         int value = Convert.ToInt32(Console.ReadLine());
                         tryQueue.Enqueue(value);
-                        //isFull();
                         if (j%2 == 0)
                         {
-                            if (tryQueue.Dequeue(out dequevaleue))
+                            if (!tryQueue.isEmpty())
                             {
+                                dequevaleue = tryQueue.Dequeue();
                                 Console.WriteLine(dequevaleue);
                             }
                             else
@@ -97,10 +104,10 @@ namespace Homework5
                                 Console.WriteLine("queue is empty");
                             }
                         }
-                        //isEmpty();
+                      
                     }
                     break;
-             }
+            }
         }
     }
 

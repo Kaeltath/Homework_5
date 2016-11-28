@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 
 namespace Homework5
 {
-    class Stack
+    class MyStack
     {
         private int index;
         private int[] stack ;
         
-        public Stack()
+        public MyStack()
         {
             index = 0;
             stack = new int[5];
@@ -32,18 +32,11 @@ namespace Homework5
             index++;
         }
 
-        public bool Pop(out int topop)
+        public int Pop()
         {
             index--;
-            if (isEmpty())
-            {
-                index = 0;
-                topop = 0;
-                return false;
-            }
+            return stack[index];
 
-            topop = stack[index];
-            return true;
         }
 
         public bool isFull()
@@ -65,16 +58,15 @@ namespace Homework5
             return false;
         }
 
-        public bool Peek(out int topeek)
+        public int Peek()
         {
-            if (index < 1)
+            if (index == 0)
             {
-                topeek = 0;
-                return false;
+                Console.WriteLine("nothing to peek");
+                return 0;
             }
 
-            topeek = stack[index - 1];
-            return true;
+            return stack[index - 1];
         }
     }
 }
